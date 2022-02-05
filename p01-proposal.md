@@ -1,6 +1,6 @@
-# Title of your Project: **Catastrophic Impacts of Climate Change**
+# Catastrophic Impacts of Climate Change :sparkles:
 
-## Code Name: **Green Team**
+## Green team :green_heart:
 
 ### Authors:
 - Julia Tameno [jtamen@uw.edu ](jtamen@uw.edu )
