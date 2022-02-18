@@ -1,17 +1,16 @@
-setwd("c:/Users/ohhay/OneDrive/Documents/INFO201/final-project-starter-wilsoncta/data")
-
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-carbon_level <- read.csv("CarbonLevel.csv")
+carbon_level <- read.csv("../data/CarbonLevel.csv")
 
-carbon_year <- group_by(carbon_level, Year) %>% 
-  summarize(Avg_carbon = mean(Seasonally.Adjusted.CO2..ppm., na.rm = TRUE)) %>% 
-  tail(n = 10)
+carbon_year <- carbon_level %>%
+  group_by(Year) %>% 
+  summarize(Avg_carbon = mean(Seasonally.Adjusted.CO2..ppm., na.rm = TRUE))
 
-year_graph <- ggplot(carbon_year, aes(x= Year, y= Avg_seasonally_adj_carbon)) + 
-  geom_bar(stat = "identity")
+year_graph <- ggplot(carbon_year, aes(x= Year, y= Avg_carbon)) +
+  geom_col() 
 year_graph
+
 
 

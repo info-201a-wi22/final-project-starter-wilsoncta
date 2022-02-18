@@ -1,8 +1,8 @@
-setwd("C:\\Users\\phuon\\Documents\\Info201code\\final-project-starter-wilsoncta\\data")
-
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+
+global_temperature <- read.csv("../data/GlobalTemperatures.csv")
 
 surface_temperature <- global_temperature %>%
   mutate(dt = as.Date(dt, format = "%Y-%m-%d")) %>%
@@ -12,6 +12,10 @@ surface_temperature <- global_temperature %>%
   summarize(AverageLandTemp = mean(LandAverageTemperature)) %>%
   mutate(Year = as.numeric(Year))
 
-surface_temp_chart <- ggplot(surface_temperature, aes(x = Year, y = AverageLandTemp)) + geom_point(fill = "red", color ="red") + geom_smooth() + scale_x_continuous(breaks = seq(1958, 2017, 6)) + ylab("Average Land Temperature (celsius)")
+surface_temp_chart <- ggplot(surface_temperature, aes(x = Year, y = AverageLandTemp)) + 
+      geom_point(fill = "red", color ="red") + 
+      geom_smooth() + 
+      scale_x_continuous(breaks = seq(1958, 2017, 6)) + 
+      ylab("Average Land Temperature (celsius)")
 
 surface_temp_chart
