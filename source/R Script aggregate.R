@@ -3,7 +3,7 @@ library(dplyr)
 Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 View(Carbon_levels_data)
 
-gre1<-Carbon_levels_data%>%
+agre1<-Carbon_levels_data%>%
   group_by(Year)%>%
   filter(Carbon.Dioxide..ppm. == max(Carbon.Dioxide..ppm., na.rm= TRUE)) %>%
   select(Year,Carbon.Dioxide..ppm.)
