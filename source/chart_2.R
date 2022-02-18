@@ -13,9 +13,10 @@ surface_temperature <- global_temperature %>%
   mutate(Year = as.numeric(Year))
 
 surface_temp_chart <- ggplot(surface_temperature, aes(x = Year, y = AverageLandTemp)) + 
-      geom_point(fill = "red", color ="red") + 
-      geom_smooth() + 
+      geom_point() + 
+      geom_smooth(method = 'loess', formula = 'y ~ x') + 
       scale_x_continuous(breaks = seq(1958, 2017, 6)) + 
-      ylab("Average Land Temperature (celsius)")
+      ylab("Average Land Temperature (celsius)") +
+      labs(title = "Average land temperature from 1958-2015")
 
 surface_temp_chart
