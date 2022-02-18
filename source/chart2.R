@@ -12,5 +12,6 @@ surface_temperature <- global_temperature %>%
   summarize(AverageLandTemp = mean(LandAverageTemperature)) %>%
   mutate(Year = as.numeric(Year))
 
-surface_temp_chart <- ggplot(surface_temperature, aes(x = Year, y = AverageLandTemp)) + geom_point(fill = "red", color ="red") + geom_smooth() + scale_x_continuous(breaks = seq(1958, 2017, 6)) + ylab("Average Land Temperature ()")
+surface_temp_chart <- ggplot(surface_temperature, aes(x = Year, y = AverageLandTemp)) + geom_point(fill = "red", color ="red") + geom_smooth() + scale_x_continuous(breaks = seq(1958, 2017, 6)) + ylab("Average Land Temperature (celsius)")
+
 surface_temp_chart
