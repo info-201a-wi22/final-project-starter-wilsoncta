@@ -1,11 +1,11 @@
 
 library(dplyr)
-Carbon_levels_data<-read.csv(file="~/Documents/info201code/final-project-starter-wilsoncta/data/CarbonLevel.csv")
+Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 View(Carbon_levels_data)
 
 agre1<-Carbon_levels_data%>%
   group_by(Year)%>%
-  filter(Carbon.Dioxide..ppm.==max(Carbon.Dioxide..ppm., na.rm= TRUE))%>%
+  filter(Carbon.Dioxide..ppm. == max(Carbon.Dioxide..ppm., na.rm= TRUE)) %>%
   select(Year,Carbon.Dioxide..ppm.)
 
 agre2<-Carbon_levels_data%>%
@@ -32,7 +32,7 @@ table1<-full_join(agre3,agre4)
 final_table<-full_join(table,table1)
 
 
-global_temp<-read.csv(file="~/Documents/info201code/final-project-starter-wilsoncta/data/GlobalTemperatures.csv")
+global_temp<-read.csv("../data/GlobalTemperatures.csv")
 
 
 surface_temperature <- global_temp %>%
