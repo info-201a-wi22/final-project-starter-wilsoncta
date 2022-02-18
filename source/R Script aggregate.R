@@ -3,7 +3,7 @@ library(dplyr)
 Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 View(Carbon_levels_data)
 
-agre1<-Carbon_levels_data%>%
+gre1<-Carbon_levels_data%>%
   group_by(Year)%>%
   filter(Carbon.Dioxide..ppm. == max(Carbon.Dioxide..ppm., na.rm= TRUE)) %>%
   select(Year,Carbon.Dioxide..ppm.)
@@ -26,11 +26,10 @@ agre4<-Carbon_levels_data%>%
   group_by(Year)%>%
   filter(Seasonally.Adjusted.CO2.Fit..ppm.==max(Seasonally.Adjusted.CO2.Fit..ppm., na.rm= TRUE))%>%
   select(Year,Seasonally.Adjusted.CO2.Fit..ppm.)
- 
+
 table1<-full_join(agre3,agre4)
 
 final_table<-full_join(table,table1)
-
 
 global_temp<-read.csv("../data/GlobalTemperatures.csv")
 

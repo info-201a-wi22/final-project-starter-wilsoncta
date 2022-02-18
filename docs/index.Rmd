@@ -103,28 +103,12 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Visualizations
+## Including Plots
 
-### Plot 1
+You can also embed plots, for example:
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../source/chart_1.R")
-natural_disasters_chart
+```{r pressure, echo=FALSE}
+plot(pressure)
 ```
 
-
-The chart is included to indicate the underlying issue of climate change.
-
-From the early *1950s* until recently, we can clearly see a major upward trend in number of disasters. Especially in floods. This might indicate the fact that there are some major factors that are affecting our climate.
-
-### Plot 2
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide',error=FALSE}
-source("../source/chart_2.R")
-surface_temp_chart
-```
-
-
-The plot is included to demonstrates the trend of land temperature in the last 60 years.
-
-As can be seen in the chart, in the last 50 years, the average land temperature has been steadily increasing almost linearly. This demonstrates the presence of global warming. Also, this can be used to explain the cause of major uptrend in floods recently. 
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
