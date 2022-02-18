@@ -1,6 +1,10 @@
 ---
 title: "Catastrophic Impacts of Climate Change"
+<<<<<<< HEAD
 author: "Green Team: Christine Hau, Wilson Ta, Phuong Lai,Aarav Dewangan"
+=======
+author: "project team members"
+>>>>>>> e87028473342cb00d2ceb1c12249a0452fdce2de
 date: "2/17/2022"
 output: html_document
 ---
@@ -9,11 +13,70 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
+## Introduction:-
+ 
+ *Climate change* is becoming a  topic of grave concern for all people. Thus our **group** has chosen this project to highlight some of the critical *reasons* for climate change. With this project, we hope to demonstrate the urgency of climate change and the need for an intervention. This project focuses on the effects and impact of climate change, such as natural disasters. To address this, we will comb through existing data to examine the occurrence and frequency of natural disasters and find the reasons.
+ 
+## Keywords:-
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+**Climate change**, **Environment**, **Natural Disaster**
+ 
+## Values and Stakeholders:-
 
-* Please see Canvas for more details.
+Health awareness, responsibility, consideration are the human values that stem from the problem of climate change since dealing with this issue is protecting the future world for our younger generations. Confronting this concern will help us preserve the Earth for the future.
+
+The direct stakeholders of climate change include the farmers and industrial manufacturers. For instance, the gasoline emissions from our vehicles contribute to 1.6 billion tons of greenhouse gasses which further exacerbate the impact of climate change (United States Environmental Protection Agency, 2022). Additionally, the production of hot-commodities such as processed foods, meat and poultry and greenhouse gasses to produce seasonal foods year-round attends to the demands of human lifestyle. Despite the direct impacts of human lifestyle, other aspects of the earth are impacted by climate change. Indirect stakeholders include us, the normal customers when the decrease in food or fuel supply will majorly affect people’s daily lives.
+
+## Research Questions:-
+
+In our project, we hope to deal with following questions:
+
+- How do increasing global surface temperature impact the possibility of other natural disasters occuring?
+- What region has the highest global surface temperature?
+- Where is climate change most impacting our oceans, in what ways does this hurt the environment around this area? What are the exact ozone layers?
+- What animals are we seeing have the lowest survival rates due to climate change? What species is it?
+- In what areas of the world does climate change impact deforestation?
+
+The importance of these research questions are motivated to see the natural occurrences that are impacted globally by climate change. Climate change has been hurting our climate at an alarming rate for many years. The purpose of these research questions is to see where exactly certain regions are having a direct impact. If we can identify these key regions we can see other key components like factors that may be altering the climate in order to get a bigger picture of what we can expect in the future. Ultimately, for any scientist or someone that wants to help protect our planet by compiling these data points in the structure of research questions we can take preventative measures to decrease any future impact. The topic specifically relating to natural disasters within the topic of climate change is crucial to help understand the levels of increasing global surface temperatures that cause additional disasters if we want to have a future planet at all.  
+
+## Variables:-
+
+The 5 variables that we have chosen to dissect the datasets are the following:-
+
+- Land Average Temperature
+- Ca
+
+## Expected implications:-
+
+We hope to develop an innovative and captivating representation of climate change by analyzing data regarding natural disasters. We aim to help visualize the importance of addressing and intervening in climate change. This may have implications such as informing policymakers for possible legislation to address contributors to climate change. In addition, our data may support filmmakers and artists who seek to portray the growing urgency of climate change into accessible media for the general public. Furthermore, this analysis may prompt further research into climate change in academia, especially marginalized and vulnerable populations impacted by climate change and natural disasters. We hope by analyzing and developing this project, we could see both short term and long term solutions to address climate change and natural disasters. As well as support those most impacted by climate change.
+
+## Limitations:-
+
+Natural disasters is a large umbrella term for many events such as earthquakes, tsunamis, typhoons, and more. Therefore, it may be difficult to accurately and efficiently capture all natural disaster events due to the large scope of natural disasters. In addition, existing data may not necessarily capture the disproportionate and inequitable effects of natural disasters and climate change in the Global South and low-income communities (Vidal, 2013). Nor will the data demonstrate the majority of environmental justice and land stewardship has been practiced by Indigenous peoples and BIPOC communities (Rights and Resources, 2020). For example, rising sea levels affecting Pacific Islander nations or the growing concern of climate refugees and migrants due to desertification (Podesta, 2021). It is also important to note that, as Data Feminism discusses, no data is neutral (D’Ignazio and Klein, 2020). In order to address the validity and perceived neutrality of our data. We must acknowledge that our data are limited in our attempt to convey the urgency to address climate change and natural disasters. Although there is statistical and empirical data, this does not necessitate fact.
+
+## Acknowledgements-
+
+Kaggle, Mauna Loa Observatory, Wang Q, Taylor JE (2016) Patterns and limitations of urban human mobility resilience under the influence of multiple types of natural disaster, Dryad digital repository and any scientist that helped us collect this data.
+
+## References:-
+
+-  [Lindsey, R., & Dahlman, L. A. (2021, August 12). Climate change: Global temperature. Climate Change: Global Temperature | NOAA Climate.gov. Retrieved February 4, 2022,](https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature#:~:text=According%20to%20NOAAs%202020%20Annual,more%20than%20twice%20that%20rate. )
+
+- D'Ignazio C, Klein LF. Data Feminism. Cambridge, MA: The MIT Press; 2020.
+
+- [Podesta J. The climate crisis, migration, and refugees. Brookings.](https://www.brookings.edu/research/the-climate-crisis-migration-and-refugees/.PublishedJuly1,2021.AccessedFebruary4,2022. )
+
+- [Rights and Resources. Toward a global baseline of carbon storage in collective lands: An updated analysis of Indigenous Peoples' and local communities' contributions to climate change mitigation. Rights + Resources.](https://rightsandresources.org/global-baseline-carbon-storage-collective-lands/.PublishedMarch16,2020.AccessedFebruary4,2022.)
+
+- [Vidal J. Climate change will hit poor countries hardest, study shows. The Guardian](https://www.theguardian.com/global-development/2013/sep/27/climate-change-poor-countries-ipcc. Published September 27, 2013. Accessed February 4, 2022. )
+
+- [Kane, S., Reilly, J., & Tobey, J. (1992). An empirical study of the economic effects of climate change on World Agriculture. Climatic Change, 21(1), 17–35.](https://doi.org/10.1007/bf00143251)
+
+
+
+
+
+
 
 ## ACCESSING THE /source DIRECTORY
 ### Example 1: Source some code and run a function
