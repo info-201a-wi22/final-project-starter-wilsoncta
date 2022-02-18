@@ -7,11 +7,11 @@ library(ggplot2)
 carbon_level <- read.csv("CarbonLevel.csv")
 
 carbon_year <- group_by(carbon_level, Year) %>% 
-  summarize(Avg_carbon = mean(Carbon.Dioxide..ppm., na.rm = TRUE)) %>% 
+  summarize(Avg_carbon = mean(Seasonally.Adjusted.CO2..ppm., na.rm = TRUE)) %>% 
   tail(n = 10)
-View(carbon_year)
 
-year_graph <- ggplot(carbon_year, aes(x= Year, y= Avg_carbon)) + 
+year_graph <- ggplot(carbon_year, aes(x= Year, y= Avg_seasonally_adj_carbon)) + 
   geom_bar(stat = "identity")
 year_graph
+
 
