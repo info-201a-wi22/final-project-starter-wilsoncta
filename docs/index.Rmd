@@ -71,7 +71,7 @@ The mean number of deaths between 1900 and 2021 due to natural disasters is 2842
 The average number of affected people between 1900 and 2021 due to natural disasters is 882361.9. Natural disasters have primarily occurred due to climate change.
 
 ## Charts-
-```{r charts 1, echo=FALSE}
+```{r charts 1, echo=FALSE, warning=FALSE,message=FALSE}
 library(dplyr)
 library(tidyr)
 source("../source/chart_1.R")
@@ -80,7 +80,7 @@ natural_disasters_chart
 
 We have used stacked area chart to depict how natural disasters have been growing from 1900 to 2021. Specifically, the years have been drawn on the x-axis, and the y axis is the number of natural disasters. This graph gives us a clear indication that as the number of years passed by, natural disasters have increased. With years passing by, the climate has deteriorated, resulting in an increase in the number of natural disasters over the years. This shows a direct effect of climate change.
 
-```{r charts 2,echo=FALSE}
+```{r charts 2,echo=FALSE, warning=FALSE,message=FALSE}
 source("../source/chart_2.R")
 surface_temp_chart
 ```
