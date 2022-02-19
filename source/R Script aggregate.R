@@ -15,27 +15,12 @@ agre2<-Carbon_levels_data%>%
 View(agre2)
 
 table<-full_join(agre1,agre2)
-
-agre3<-Carbon_levels_data%>%
-  group_by(Year)%>%
-  filter(Carbon.Dioxide.Fit..ppm.==max(Carbon.Dioxide.Fit..ppm., na.rm= TRUE))%>%
-  select(Year,Carbon.Dioxide.Fit..ppm.)
-View (agre3)
-
-agre4<-Carbon_levels_data%>%
-  group_by(Year)%>%
-  filter(Seasonally.Adjusted.CO2.Fit..ppm.==max(Seasonally.Adjusted.CO2.Fit..ppm., na.rm= TRUE))%>%
-  select(Year,Seasonally.Adjusted.CO2.Fit..ppm.)
- 
-table1<-full_join(agre3,agre4)
-
-final_table<-full_join(table,table1)
-
+View(table)
 
 global_temp<-read.csv(file="~/Documents/info201code/final-project-starter-wilsoncta/data/GlobalTemperatures.csv")
+View(global_temp)
 
-
-surface_temperature <- global_temp %>%
+average_land_temperature <- global_temp %>%
   mutate(dt = as.Date(dt, format = "%Y-%m-%d")) %>%
   filter(dt >= as.Date("1958-01-01") & dt < as.Date("2019-01-01")) %>%
   mutate(Year = format(dt, "%Y")) %>%
@@ -43,4 +28,17 @@ surface_temperature <- global_temp %>%
   summarize(AverageLandTemp = mean(LandAverageTemperature)) %>%
   mutate(Year = as.numeric(Year))
 
-aggregate_table<-full_join(final_table,surface_temperature)
+land_and_ocean_temperature <- global_temp %>%
+  mutate(dt = as.Date(dt, format = "%Y-%m-%d")) %>%
+  filter(dt >= as.Date("1958-01-01") & dt < as.Date("2019-01-01")) %>%
+  mutate(Year = format(dt, "%Y")) %>%
+  group_by(Year) %>%
+  summarize(LandOceanAvg = mean(LandAndOceanAverageTemperature)) %>%
+  mutate(Year = as.numeric(Year))
+
+aggregate_table<-full_join(table,average_land_temperature)
+aggregate_table_final<-full_join(aggregate_table,land_and_ocean_temperature)
+View(aggregate_table_final)
+
+
+
