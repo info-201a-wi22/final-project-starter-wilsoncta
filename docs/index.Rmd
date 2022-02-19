@@ -35,10 +35,10 @@ In our project, we hope to deal with following questions:
 
 The importance of these research questions are motivated to see the natural occurrences that are impacted globally by climate change. Climate change has been hurting our climate at an alarming rate for many years. The purpose of these research questions is to see where exactly certain regions are having a direct impact. If we can identify these key regions we can see other key components like factors that may be altering the climate in order to get a bigger picture of what we can expect in the future. Ultimately, for any scientist or someone that wants to help protect our planet by compiling these data points in the structure of research questions we can take preventative measures to decrease any future impact. The topic specifically relating to natural disasters within the topic of climate change is crucial to help understand the levels of increasing global surface temperatures that cause additional disasters if we want to have a future planet at all.  
 
-<<<<<<< HEAD
+
 ## Summary Statistics of 5 Variables:-
 
-```{r summar, echo=FALSE}
+```{r summary, echo=FALSE, warning=FALSE,message=FALSE}
 library(dplyr)
 library(tidyr)
 source("../source/summarize.R")
