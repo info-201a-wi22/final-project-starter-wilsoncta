@@ -1,14 +1,6 @@
 ---
 title: "Catastrophic Impacts of Climate Change"
-<<<<<<< HEAD
-<<<<<<< HEAD
 author: "Green Team: Christine Hau, Wilson Ta, Phuong Lai,Aarav Dewangan"
-=======
-author: "project team members"
->>>>>>> e87028473342cb00d2ceb1c12249a0452fdce2de
-=======
-author: "Phuong Hung Lai, Christine Hau, Wilson Ta, Aarav Vishesh Dewangan"
->>>>>>> eb2957471df763e7c3d3d5f8dca1df14f965c7ff
 date: "2/17/2022"
 output: html_document
 ---
@@ -78,6 +70,18 @@ The mean number of deaths between 1900 and 2021 due to natural disasters is 2842
 
 The average number of affected people between 1900 and 2021 due to natural disasters is 882361.9. Natural disasters have primarily occurred due to climate change.
 
+## Tables:-
+
+```{r table, echo=FALSE, warning=FALSE,message=FALSE}
+source("../source/R Script aggregate.R")
+table
+table1
+final_table
+aggregate_table
+aggregate_table_final
+```
+
+
 ## Charts-
 ```{r charts 1, echo=FALSE, warning=FALSE,message=FALSE}
 library(dplyr)
@@ -127,38 +131,3 @@ Kaggle, Mauna Loa Observatory, Wang Q, Taylor JE (2016) Patterns and limitations
 - [Vidal J. Climate change will hit poor countries hardest, study shows. The Guardian](https://www.theguardian.com/global-development/2013/sep/27/climate-change-poor-countries-ipcc. Published September 27, 2013. Accessed February 4, 2022. )
 
 - [Kane, S., Reilly, J., & Tobey, J. (1992). An empirical study of the economic effects of climate change on World Agriculture. Climatic Change, 21(1), 17–35.](https://doi.org/10.1007/bf00143251)
-
-
-
-
-
-
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
-```
-
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
-
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
