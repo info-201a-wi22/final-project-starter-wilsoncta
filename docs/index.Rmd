@@ -1,10 +1,14 @@
 ---
 title: "Catastrophic Impacts of Climate Change"
 <<<<<<< HEAD
+<<<<<<< HEAD
 author: "Green Team: Christine Hau, Wilson Ta, Phuong Lai,Aarav Dewangan"
 =======
 author: "project team members"
 >>>>>>> e87028473342cb00d2ceb1c12249a0452fdce2de
+=======
+author: "Phuong Hung Lai, Christine Hau, Wilson Ta, Aarav Vishesh Dewangan"
+>>>>>>> eb2957471df763e7c3d3d5f8dca1df14f965c7ff
 date: "2/17/2022"
 output: html_document
 ---
@@ -13,7 +17,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction:-
+## Introduction:
  
  *Climate change* is becoming a  topic of grave concern for all people. Thus our **group** has chosen this project to highlight some of the critical *reasons* for climate change. With this project, we hope to demonstrate the urgency of climate change and the need for an intervention. This project focuses on the effects and impact of climate change, such as natural disasters. To address this, we will comb through existing data to examine the occurrence and frequency of natural disasters and find the reasons.
  
@@ -21,17 +25,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Climate change**, **Environment**, **Natural Disaster**
  
-## Values and Stakeholders:-
+## Values and Stakeholders:
 
 Health awareness, responsibility, consideration are the human values that stem from the problem of climate change since dealing with this issue is protecting the future world for our younger generations. Confronting this concern will help us preserve the Earth for the future.
 
 The direct stakeholders of climate change include the farmers and industrial manufacturers. For instance, the gasoline emissions from our vehicles contribute to 1.6 billion tons of greenhouse gasses which further exacerbate the impact of climate change (United States Environmental Protection Agency, 2022). Additionally, the production of hot-commodities such as processed foods, meat and poultry and greenhouse gasses to produce seasonal foods year-round attends to the demands of human lifestyle. Despite the direct impacts of human lifestyle, other aspects of the earth are impacted by climate change. Indirect stakeholders include us, the normal customers when the decrease in food or fuel supply will majorly affect people’s daily lives.
 
-## Research Questions:-
+## Research Questions:
 
 In our project, we hope to deal with following questions:
 
-- How do increasing global surface temperature impact the possibility of other natural disasters occuring?
+- How do increasing global surface temperature impact the possibility of other natural disasters occurring?
 - What region has the highest global surface temperature?
 - Where is climate change most impacting our oceans, in what ways does this hurt the environment around this area? What are the exact ozone layers?
 - What animals are we seeing have the lowest survival rates due to climate change? What species is it?
@@ -39,26 +43,78 @@ In our project, we hope to deal with following questions:
 
 The importance of these research questions are motivated to see the natural occurrences that are impacted globally by climate change. Climate change has been hurting our climate at an alarming rate for many years. The purpose of these research questions is to see where exactly certain regions are having a direct impact. If we can identify these key regions we can see other key components like factors that may be altering the climate in order to get a bigger picture of what we can expect in the future. Ultimately, for any scientist or someone that wants to help protect our planet by compiling these data points in the structure of research questions we can take preventative measures to decrease any future impact. The topic specifically relating to natural disasters within the topic of climate change is crucial to help understand the levels of increasing global surface temperatures that cause additional disasters if we want to have a future planet at all.  
 
-## Variables:-
+
+## Summary Statistics of 5 Variables:-
+
+```{r summary, echo=FALSE, warning=FALSE,message=FALSE}
+library(dplyr)
+library(tidyr)
+source("../source/summarize.R")
+summary_info
+```
+
 
 The 5 variables that we have chosen to dissect the datasets are the following:-
 
-- Land Average Temperature
-- Ca
+- Land Max Temperature - 
 
-## Expected implications:-
+The maximum land temperature  recorded was 21.32 Celsius in 2011, and the minimum
+ land temperature was -5.407 Celsius in 1857. 
+
+- Land and Ocean Average Temperature -
+
+The maximum land and ocean average temperature  recorded was 17.611 Celsius in 2015, and the minimum
+average land and ocean temperature was 12.475 Celsius in 1857. 
+
+-  Carbon dioxide levels -
+
+The maimum carbon dioxide level was 407.65 ppm in 2016 and the minimum carbon dioxide level was 313.21 ppm in 1958. 
+
+- Average Number of deaths -
+ 
+The mean number of deaths between 1900 and 2021 due to natural disasters is 2842.866. Natural disasters have primarily occurred due to climate change.
+
+- Average Number of Affected people
+
+The average number of affected people between 1900 and 2021 due to natural disasters is 882361.9. Natural disasters have primarily occurred due to climate change.
+
+## Charts-
+```{r charts 1, echo=FALSE, warning=FALSE,message=FALSE}
+library(dplyr)
+library(tidyr)
+source("../source/chart_1.R")
+natural_disasters_chart
+```
+
+We have used stacked area chart to depict how natural disasters have been growing from 1900 to 2021. Specifically, the years have been drawn on the x-axis, and the y axis is the number of natural disasters. This graph gives us a clear indication that as the number of years passed by, natural disasters have increased. With years passing by, the climate has deteriorated, resulting in an increase in the number of natural disasters over the years. This shows a direct effect of climate change.
+
+```{r charts 2,echo=FALSE, warning=FALSE,message=FALSE}
+source("../source/chart_2.R")
+surface_temp_chart
+```
+
+We have used scatter plot with a fitting line to depict how average land temperature has varied from 1958 to 2019. Specefically the x-axis is depicting the years and the y-axis is depicting the average land temperature (in Celsius) The most striking value is observed in 2018 when average land temperature is above 10 degree Celsius. Climate change has led to a massive increase in average land temperature over the years which is not at all good for the inhabitants of the planet earth. 
+
+```{r charts 3, echo=FALSE}
+source("../source/chart_3.R")
+year_graph
+```
+
+We have used bar chart to depict how average carbon dioxide level has varied from 1958 to 2017. Specefically the x-axis is depicting the years and the y-axis is depicting the average carbon dioxide level (in PPM). Over the years, we witness that the carbon dioxide level has been increasing and thus this can be cited as one of the main reasons for climate change. 
+
+## Expected implications:
 
 We hope to develop an innovative and captivating representation of climate change by analyzing data regarding natural disasters. We aim to help visualize the importance of addressing and intervening in climate change. This may have implications such as informing policymakers for possible legislation to address contributors to climate change. In addition, our data may support filmmakers and artists who seek to portray the growing urgency of climate change into accessible media for the general public. Furthermore, this analysis may prompt further research into climate change in academia, especially marginalized and vulnerable populations impacted by climate change and natural disasters. We hope by analyzing and developing this project, we could see both short term and long term solutions to address climate change and natural disasters. As well as support those most impacted by climate change.
 
-## Limitations:-
+## Limitations:
 
 Natural disasters is a large umbrella term for many events such as earthquakes, tsunamis, typhoons, and more. Therefore, it may be difficult to accurately and efficiently capture all natural disaster events due to the large scope of natural disasters. In addition, existing data may not necessarily capture the disproportionate and inequitable effects of natural disasters and climate change in the Global South and low-income communities (Vidal, 2013). Nor will the data demonstrate the majority of environmental justice and land stewardship has been practiced by Indigenous peoples and BIPOC communities (Rights and Resources, 2020). For example, rising sea levels affecting Pacific Islander nations or the growing concern of climate refugees and migrants due to desertification (Podesta, 2021). It is also important to note that, as Data Feminism discusses, no data is neutral (D’Ignazio and Klein, 2020). In order to address the validity and perceived neutrality of our data. We must acknowledge that our data are limited in our attempt to convey the urgency to address climate change and natural disasters. Although there is statistical and empirical data, this does not necessitate fact.
 
-## Acknowledgements-
+## Acknowledgements:
 
 Kaggle, Mauna Loa Observatory, Wang Q, Taylor JE (2016) Patterns and limitations of urban human mobility resilience under the influence of multiple types of natural disaster, Dryad digital repository and any scientist that helped us collect this data.
 
-## References:-
+## References:
 
 -  [Lindsey, R., & Dahlman, L. A. (2021, August 12). Climate change: Global temperature. Climate Change: Global Temperature | NOAA Climate.gov. Retrieved February 4, 2022,](https://www.climate.gov/news-features/understanding-climate/climate-change-global-temperature#:~:text=According%20to%20NOAAs%202020%20Annual,more%20than%20twice%20that%20rate. )
 
@@ -106,12 +162,3 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
