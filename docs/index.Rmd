@@ -74,13 +74,9 @@ The average number of affected people between 1900 and 2021 due to natural disas
 
 ```{r table, echo=FALSE, warning=FALSE,message=FALSE}
 source("../source/R Script aggregate.R")
-table
-table1
-final_table
-aggregate_table
 aggregate_table_final
 ```
-
+The striking values are the ones found in the year 2017 for the level of Carbon dioxide and level of seasonally adjusted Carbon dioxide and in 2015 for land average temperature and land and ocean average temperature. These are significantly very large values when compared to the values at the starting year (1958). So these values are successful in demonstrating the harmful effects of climate change.
 
 ## Charts-
 ```{r charts 1, echo=FALSE, warning=FALSE,message=FALSE}
