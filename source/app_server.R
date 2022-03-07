@@ -3,9 +3,10 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-global_temp<-read.csv("/Users/vivekdewangan/Desktop/info201codes/final-project-starter-wilsoncta/data/GlobalTemperatures.csv")
 
-Carbon_levels_data<-read.csv("/Users/vivekdewangan/Desktop/info201codes/final-project-starter-wilsoncta/data/CarbonLevel.csv")
+global_temp<-read.csv("../data/GlobalTemperatures.csv")
+
+Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 
 build_chart <- function(radio,plot) {
   
@@ -46,7 +47,7 @@ server<-server <- function(input, output) {
     return(build_chart(input$radio,input$plot))
   })
   
-  output$markdown <- renderUI({
+  output$markdown2 <- renderUI({
     HTML(markdown::markdownToHTML(knit('Bibliography.Rmd', quiet = TRUE)))
   })
   

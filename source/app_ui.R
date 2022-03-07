@@ -72,9 +72,9 @@ chart_panel <- tabPanel(
 
 last_page <- tabPanel(
   "Bibliography", 
-  titlePanel("Page 1"),
+  titlePanel("Bibliography"),
   mainPanel(
-    uiOutput("markdown")
+    uiOutput("markdown2")
   )
 )
   
