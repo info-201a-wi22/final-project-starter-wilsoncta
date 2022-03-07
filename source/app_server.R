@@ -8,6 +8,33 @@ global_temp<-read.csv("../data/GlobalTemperatures.csv")
 
 Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 
+char_2_site <- function(yearInput) {
+  co2_level <- Carbon_levels_data %>%
+    filter(Year >= yearInput[1],
+           Year <= yearInput[2]) %>%
+    group_by(Year) %>%
+    select(1, c(4,7)) %>%
+    summarise_all(funs(mean), na.rm = TRUE) %>%
+    gather(
+      key = "Type",
+      value = "CO2",
+      -Year
+    )
+  
+  if (yearInput[1] == yearInput[2]) {
+    p <- ggplot(co2_level, aes(x= Type, y = CO2)) +
+      geom_bar(stat = "identity") +
+      theme_minimal()
+    return(ggplotly(p))
+  } else {
+    p <- ggplot(co2_level, aes(x = Year, y = CO2)) +
+      geom_line(color = "Red") +
+      theme_minimal()
+    
+    return(ggplotly(p))
+  }
+}
+
 build_chart <- function(radio,plot) {
   
   surface_temperature <- global_temp %>%
@@ -51,5 +78,10 @@ server<-server <- function(input, output) {
     HTML(markdown::markdownToHTML(knit('Bibliography.Rmd', quiet = TRUE)))
   })
   
+  
+  
+  output$chart2 <- renderPlotly({
+    char_2_site(input$year)
+  })
   
 }

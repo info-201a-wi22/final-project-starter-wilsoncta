@@ -1,6 +1,17 @@
 library(shiny)
 library(plotly)
 
+page_two <- tabPanel("Chart 2",
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("year", label = "Year",sep = "", min = 1975, max = 2017, value =  c(1975, 2017))
+    ),
+    mainPanel(
+      plotlyOutput("chart2")
+    )
+  )
+)
+
 page_one <- tabPanel(
   "Introduction", 
   titlePanel("Page 1"), # show with a displayed title
@@ -38,6 +49,7 @@ chart_sidebar_content <- sidebarPanel(
                      selected = "bar")
   
 )
+
 
 
 
@@ -82,6 +94,7 @@ ui <- navbarPage(
   "Catastrophic Effects of Climate Change",
   page_one,
   chart_panel,
+  page_two,
   last_page
 )
 
