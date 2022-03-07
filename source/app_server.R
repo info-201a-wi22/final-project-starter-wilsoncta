@@ -46,4 +46,9 @@ server<-server <- function(input, output) {
     return(build_chart(input$radio,input$plot))
   })
   
+  output$markdown <- renderUI({
+    HTML(markdown::markdownToHTML(knit('Bibliography.Rmd', quiet = TRUE)))
+  })
+  
+  
 }

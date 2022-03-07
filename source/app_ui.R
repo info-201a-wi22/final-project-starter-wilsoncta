@@ -70,14 +70,19 @@ chart_panel <- tabPanel(
   )
 )
 
-
-
+last_page <- tabPanel(
+  "Bibliography", 
+  titlePanel("Page 1"),
+  mainPanel(
+    uiOutput("markdown")
+  )
+)
   
 ui <- navbarPage(
   "Catastrophic Effects of Climate Change",
   page_one,
-  chart_panel
-  
+  chart_panel,
+  last_page
 )
 
 
