@@ -83,7 +83,7 @@ chart_panel <- tabPanel(
 )
 
 tabPanel(
-  ("Interactive Graph 1"),
+  ("page_three"),
   sidebarLayout(
     sidebarPanel(
       sliderInput(inputId="Year",
