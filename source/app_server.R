@@ -8,7 +8,7 @@ global_temp<-read.csv("../data/GlobalTemperatures.csv")
 
 Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 
-natural_disasters <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-wilsoncta/main/data/NaturalDisaster.csv")
+natural_disasters <- read.csv("../data/NaturalDisaster.csv")
 
 char_2_site <- function(yearInput) {
   co2_level <- Carbon_levels_data %>%

@@ -82,8 +82,8 @@ chart_panel <- tabPanel(
   )
 )
 
-tabPanel(
-  ("page_three"),
+page_three<-tabPanel(
+  ("Chart 3"),
   sidebarLayout(
     sidebarPanel(
       sliderInput(inputId="Year",
