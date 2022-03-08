@@ -82,6 +82,36 @@ chart_panel <- tabPanel(
   )
 )
 
+tabPanel(
+  ("Interactive Graph 1"),
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(inputId="Year",
+                  label="Year Range:",
+                  min=min(natural_disasters$Year),
+                  max=max(natural_disasters$Year),
+                  value= c(min(natural_disasters$year),max(natural_disasters$Year)),
+                  sep=""
+      ),
+      selectInput(
+        inputId="Country",
+        label= "Country:",
+        choices= unique(natural_disasters$Country),
+        selected= "Indonesia"
+      )
+    ),
+    mainPanel(
+      h3(textOutput("caption"),
+         position="right",
+         width=8,
+         plotlyOutput(outputId = "plotted")
+      ),
+      tags$div(class = "header"),
+      h5("This chart attempts to display the different types of natural disasters from the last century and more recent years. The different types of disasters are indicated by the different colors. The widgets allow for the user to adjust what natural disasters occurred during a range of years and a specific country they'd like to see.")
+    )
+  )
+)
+
 last_page <- tabPanel(
   "Bibliography", 
   titlePanel("Bibliography"),
@@ -95,6 +125,7 @@ ui <- navbarPage(
   page_one,
   chart_panel,
   page_two,
+  page_three,
   last_page
 )
 

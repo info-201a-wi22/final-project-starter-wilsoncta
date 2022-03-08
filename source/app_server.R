@@ -8,6 +8,8 @@ global_temp<-read.csv("../data/GlobalTemperatures.csv")
 
 Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
 
+natural_disasters <- read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-wilsoncta/main/data/NaturalDisaster.csv")
+
 char_2_site <- function(yearInput) {
   co2_level <- Carbon_levels_data %>%
     filter(Year >= yearInput[1],
@@ -82,6 +84,21 @@ server<-server <- function(input, output) {
   
   output$chart2 <- renderPlotly({
     char_2_site(input$year)
+  })
+  
+  output$plotted <- renderPlotly({
+    recent_disasters <- natural_disasters%>%
+      filter(Country==input$Country)%>%
+      filter(!(Disaster.Type %in% c("Epidemic", "Animal accident", "Insect infestation")))
+    
+    natural_disasters_chart <- ggplot(recent_disasters, aes(x = Year, fill = Disaster.Type)) + 
+      geom_area(stat = "bin", binwidth = 2) + 
+      ylab("Natural disasters count") + 
+      theme(legend.key.size = unit(0.2,"cm")) + 
+      labs(fill = "Disaster Type", title = "Natural disasters in the World") + 
+      theme(legend.position = c(0.2,0.5))+
+      scale_x_continuous (limits=input$Year)
+    return(natural_disasters_chart)
   })
   
 }
