@@ -1,6 +1,6 @@
 library(shiny)
 library(plotly)
-
+source("app_server.R")
 page_two <- tabPanel("Chart 2",
   sidebarLayout(
     sidebarPanel(
@@ -94,7 +94,7 @@ page_three<-tabPanel(
                   label="Year Range:",
                   min=min(natural_disasters$Year),
                   max=max(natural_disasters$Year),
-                  value= c(min(natural_disasters$year),max(natural_disasters$Year)),
+                  value= c(min(natural_disasters$Year),max(natural_disasters$Year)),
                   sep=""
       ),
       selectInput(
@@ -134,13 +134,35 @@ summary <- tabPanel(
   )
 )
 
+summary_statistics <- tabPanel(
+  "Summary Statistics", 
+  titlePanel("Summary Statiscs"), # show with a displayed title
+  # This content uses a sidebar layout
+  
+  mainPanel(
+    uiOutput("markdown4")
+  )
+)
+
+project_report <- tabPanel(
+  "Project Report", 
+  titlePanel("Project Report"), # show with a displayed title
+  # This content uses a sidebar layout
+  
+  mainPanel(
+    uiOutput("markdown5")
+  )
+)
+
 ui <- navbarPage(
   "Catastrophic Effects of Climate Change",
   page_one,
+  summary_statistics,
   summary,
   chart_panel,
   page_two,
   page_three,
+  project_report,
   last_page
 )
 

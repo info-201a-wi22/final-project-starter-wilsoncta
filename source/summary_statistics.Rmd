@@ -1,0 +1,43 @@
+---
+title: "Summary Statistics"
+author: "Aarav Vishesh Dewangan"
+date: "08/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Summary Statistics of 5 Variables:-
+
+```{r summary, echo=FALSE, warning=FALSE,message=FALSE}
+library(dplyr)
+library(tidyr)
+source("../source/summarize.R")
+summary_info
+```
+The 5 variables that we have chosen to dissect the datasets are the following:-
+
+- Land Max Temperature - 
+
+The maximum land temperature  recorded was 21.32 Celsius in 2011, and the minimum
+ land temperature was -5.407 Celsius in 1857. 
+
+- Land and Ocean Average Temperature -
+
+The maximum land and ocean average temperature  recorded was 17.611 Celsius in 2015, and the minimum
+average land and ocean temperature was 12.475 Celsius in 1857. 
+
+-  Carbon dioxide levels -
+
+The maimum carbon dioxide level was 407.65 ppm in 2016 and the minimum carbon dioxide level was 313.21 ppm in 1958. 
+
+- Average Number of deaths -
+ 
+The mean number of deaths between 1900 and 2021 due to natural disasters is 2842.866. Natural disasters have primarily occurred due to climate change.
+
+- Average Number of Affected people
+
+The average number of affected people between 1900 and 2021 due to natural disasters is 882361.9. Natural disasters have primarily occurred due to climate change.
+

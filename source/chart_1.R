@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-natural_disasters <- read.csv("../data/NaturalDisaster.csv")
+natural_disasters <- read.csv("data/NaturalDisaster.csv")
 
 recent_disasters <- natural_disasters %>%
   filter(Disaster.Type != c("Epidemic", "Animal accident", "Insect infestation"))

@@ -2,10 +2,9 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-setwd("~/Desktop/info201codes/final-project-starter-wilsoncta/data")
-carbon_level<-read.csv("CarbonLevel.csv")
-global_temperatures<-read.csv("GlobalTemperatures.csv")
-natural_disaster<-read.csv("NaturalDisaster.csv")
+carbon_level<-read.csv("data/CarbonLevel.csv")
+global_temperatures<-read.csv("data/GlobalTemperatures.csv")
+natural_disaster<-read.csv("data/NaturalDisaster.csv")
 
 summary_info <- list()
 summary_info$max_land__avg_temperature<- global_temperatures %>% 

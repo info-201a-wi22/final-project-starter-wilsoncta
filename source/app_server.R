@@ -6,11 +6,11 @@ library(stringr)
 library(shiny)
 
 
-global_temp<-read.csv("../data/GlobalTemperatures.csv")
+global_temp<-read.csv("data/GlobalTemperatures.csv")
 
-Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
+Carbon_levels_data<-read.csv("data/CarbonLevel.csv")
 
-natural_disasters <- read.csv("../data/NaturalDisaster.csv")
+natural_disasters <- read.csv("data/NaturalDisaster.csv")
 
 char_2_site <- function(yearInput) {
   co2_level <- Carbon_levels_data %>%
@@ -108,6 +108,14 @@ server<-server <- function(input, output) {
   
   output$markdown3 <- renderUI({
     HTML(markdown::markdownToHTML(knit('Summary.Rmd', quiet = TRUE)))
+  })
+  
+  output$markdown4 <- renderUI({
+    HTML(markdown::markdownToHTML(knit('summary_statistics.Rmd', quiet = TRUE)))
+  })
+  
+  output$markdown5 <- renderUI({
+    HTML(markdown::markdownToHTML(knit('project_report.Rmd', quiet = TRUE)))
   })
   
 }

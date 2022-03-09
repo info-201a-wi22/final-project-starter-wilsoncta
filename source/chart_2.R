@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-global_temp<-read.csv("../data/GlobalTemperatures.csv")
+global_temp<-read.csv("data/GlobalTemperatures.csv")
 
 
 surface_temperature <- global_temp %>%

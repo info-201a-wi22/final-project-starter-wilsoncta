@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-Carbon_levels_data<-read.csv("../data/CarbonLevel.csv")
+Carbon_levels_data<-read.csv("data/CarbonLevel.csv")
 agre4<-Carbon_levels_data%>%
   group_by(Year)%>%
   filter(Seasonally.Adjusted.CO2.Fit..ppm.==max(Seasonally.Adjusted.CO2.Fit..ppm., na.rm= TRUE))%>%

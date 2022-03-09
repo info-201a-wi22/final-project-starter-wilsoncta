@@ -1,0 +1,13 @@
+name: source
+title: source
+username:
+account: aarav
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5811431
+bundleId: 5659537
+url: https://aarav.shinyapps.io/source/
+when: 1646801204.06032
+lastSyncTime: 1646801204.06035
+asMultiple: FALSE
+asStatic: FALSE
