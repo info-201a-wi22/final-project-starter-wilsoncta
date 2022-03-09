@@ -7,7 +7,11 @@ page_two <- tabPanel("Chart 2",
       sliderInput("year", label = "Year",sep = "", min = 1975, max = 2017, value =  c(1975, 2017))
     ),
     mainPanel(
-      plotlyOutput("chart2")
+      plotlyOutput("chart2"),
+      
+      p("This chart is used to show the change in average yearly CO2 level around the world.
+        It is clearly shown in the chart that the average CO2 concentration in the air has been steadily
+        rising since the 1975 to the latest year in the dataset which is 2020.")
     )
   )
 )

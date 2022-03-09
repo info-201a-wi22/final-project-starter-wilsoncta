@@ -2,6 +2,8 @@ library(knitr)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(stringr)
+library(shiny)
 
 
 global_temp<-read.csv("../data/GlobalTemperatures.csv")
@@ -21,16 +23,19 @@ char_2_site <- function(yearInput) {
       key = "Type",
       value = "CO2",
       -Year
-    )
+    ) %>%
+    mutate(Type = str_replace_all(Type, "[.]+", " "))
   
   if (yearInput[1] == yearInput[2]) {
     p <- ggplot(co2_level, aes(x= Type, y = CO2)) +
-      geom_bar(stat = "identity") +
+      geom_bar(stat = "identity", fill = "green") +
       theme_minimal()
     return(ggplotly(p))
   } else {
-    p <- ggplot(co2_level, aes(x = Year, y = CO2)) +
-      geom_line(color = "Red") +
+    p <- ggplot(co2_level, aes(x = Year, y = CO2)) + 
+      geom_line(color = "green") + 
+      labs(title = "World CO2 Level by Year ") +
+      ylab("CO2 (ppm)") +
       theme_minimal()
     
     return(ggplotly(p))
