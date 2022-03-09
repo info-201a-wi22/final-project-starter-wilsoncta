@@ -106,4 +106,8 @@ server<-server <- function(input, output) {
     return(natural_disasters_chart)
   })
   
+  output$markdown3 <- renderUI({
+    HTML(markdown::markdownToHTML(knit('Summary.Rmd', quiet = TRUE)))
+  })
+  
 }

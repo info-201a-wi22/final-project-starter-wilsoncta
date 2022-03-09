@@ -17,7 +17,7 @@ page_two <- tabPanel("Chart 2",
 )
 
 page_one <- tabPanel(
-  "Introduction", 
+  "Project Report", 
   titlePanel("Page 1"), # show with a displayed title
   # This content uses a sidebar layout
   
@@ -124,14 +124,23 @@ last_page <- tabPanel(
   )
 )
   
+summary <- tabPanel(
+  "Summary", 
+  titlePanel("Summary"), # show with a displayed title
+  # This content uses a sidebar layout
+  
+  mainPanel(
+    uiOutput("markdown3")
+  )
+)
+
 ui <- navbarPage(
   "Catastrophic Effects of Climate Change",
   page_one,
+  summary,
   chart_panel,
   page_two,
   page_three,
   last_page
 )
-
-
 
