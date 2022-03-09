@@ -158,11 +158,11 @@ ui <- navbarPage(
   "Catastrophic Effects of Climate Change",
   page_one,
   summary_statistics,
-  summary,
   chart_panel,
   page_two,
   page_three,
   project_report,
+  summary,
   last_page
 )
 
