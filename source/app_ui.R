@@ -17,7 +17,7 @@ page_two <- tabPanel("Chart 2",
 )
 
 page_one <- tabPanel(
-  "Project Report", 
+  "Introduction", 
   titlePanel("Page 1"), # show with a displayed title
   # This content uses a sidebar layout
   
